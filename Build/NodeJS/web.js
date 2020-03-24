@@ -18,7 +18,7 @@ if (port == null) throw new TypeError('port cannot be null');
 
 // Setup
 var server = new Server(subdomain, port, '/etc/letsencrypt/live/roundsquare.site');
-['./public', './public/html', '../../Build/WebGL/Build'].forEach(v => server.useStatic(v));
+['./public', './public/html', '../WebGL/Build'].forEach(v => server.useStatic(v));
 
 var router = server.start();
 
