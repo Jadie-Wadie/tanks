@@ -1,0 +1,41 @@
+{
+	"name": "template",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./web.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"web": "node .",
+		"local": "node ./local.js",
+		"server": "nodemon ./web.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sombelitza/Template.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Sombelitza/Template/issues"
+	},
+	"homepage": "https://github.com/Sombelitza/Template#readme",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"colors": "^1.4.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"express-session": "^1.17.0",
+		"express-subdomain": "^1.0.5",
+		"memorystore": "^1.6.1",
+		"mongodb": "^3.5.5",
+		"mysql": "^2.17.1",
+		"passport": "^0.4.0",
+		"passport-local": "^1.0.0",
+		"serve-favicon": "^2.5.0",
+		"socket.io": "^2.3.0",
+		"xss-filters": "^1.2.7"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.4"
+	}
+}
