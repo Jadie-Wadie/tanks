@@ -1,6 +1,10 @@
 {
     "scores": [
         {
+            "name": "PL1",
+            "score": 7
+        },
+        {
             "name": "JAI",
             "score": 8
         },
@@ -9,8 +13,8 @@
             "score": 13
         },
         {
-            "name": "PL1",
-            "score": 7
+            "name": "USR",
+            "score": 13
         }
     ]
 }
