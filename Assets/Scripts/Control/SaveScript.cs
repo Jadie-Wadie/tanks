@@ -94,3 +94,33 @@ public class SaveScript : MonoBehaviour
 		data.scores[temp.Length] = new Score(name, value);
 	}
 }
+
+[System.Serializable]
+public class Scores
+{
+	public Score[] scores = new Score[0];
+
+	public static Scores CreateFromJSON(string JSON)
+	{
+		return JsonUtility.FromJson<Scores>(JSON);
+	}
+}
+
+
+[System.Serializable]
+public class Score
+{
+	public string name;
+	public int score;
+
+	public Score(string _name, int _score)
+	{
+		name = _name;
+		score = _score;
+	}
+
+	public static Score CreateFromJSON(string JSON)
+	{
+		return JsonUtility.FromJson<Score>(JSON);
+	}
+}

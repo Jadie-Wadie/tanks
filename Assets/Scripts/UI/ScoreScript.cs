@@ -19,18 +19,18 @@ public class ScoreScript : MonoBehaviour
         entryParent.GetComponent<GridLayoutGroup>().cellSize = new Vector3(-entryParent.GetComponent<RectTransform>().sizeDelta.x, 50f);
     }
 
-    public void CreateEntries(Scores data)
+    public void CreateEntries(Score[] scores)
     {
         foreach (Transform child in entryParent.transform)
         {
             Destroy(child.gameObject);
         }
         
-        Array.Sort(data.scores, new ScoreComparer());
+        Array.Sort(scores, new ScoreComparer());
 
-        for (int i = 0; i < data.scores.Length; i++)
+        for (int i = 0; i < scores.Length; i++)
         {
-            Score score = data.scores[i];
+            Score score = scores[i];
 
             GameObject entry = Instantiate(entryPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
             entry.transform.SetParent(entryParent.transform);
@@ -40,7 +40,7 @@ public class ScoreScript : MonoBehaviour
             entryScript.score = score.score;
         }
 
-        entryParent.GetComponent<RectTransform>().sizeDelta = new Vector2(0f, (data.scores.Length - 1) * 50);
+        entryParent.GetComponent<RectTransform>().sizeDelta = new Vector2(0f, (scores.Length - 1) * 50);
     }
 }
 
